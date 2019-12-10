@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+   <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".box").hide();
+            });
+            $("#btn2").click(function(){
+                $(".box").show();
+            });
+            $("#btn3").click(function(){
+                $(".box").toggle();
+            });
+            
+            $("#btn4").click(function(){
+                $(".box").fadeIn(1000);
+            });
+            $("#btn5").click(function(){
+                $(".box").fadeOut("slow");
+            });
+            $("#btn6").click(function(){
+                $(".box").fadeToggle("fast");
+            });
+            $("#btn7").click(function(){
+                $(".box").fadeTo("slow",0.3);
+            });
+            $("#btn8").click(function(){
+                $(".box").fadeTo("slow",1);
+            });
+            $("#btn9").click(function(){
+                $(".box").slideUp();
+            });
+            $("#btn10").click(function(){
+                $(".box").slideDown();
+            });
+            $("#btn11").click(function(){
+                $(".box").slideToggle();
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 효과</h1>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">toggle</button>
+    <button id="btn4">fadeIn</button>
+    <button id="btn5">fadeOut</button>
+    <button id="btn6">fadeToggle</button>
+    <button id="btn7">fadeTo(0.3)</button>
+    <button id="btn8">fadeTo(1)</button>
+    <button id="btn9">slideUp</button>
+    <button id="btn10">slideDown</button>
+    <button id="btn11">slideToggle</button>
+    
+    
+    <div class="box">
+        $(selector).method();<br>
+        $(selector).method(duration);<br>
+        $(selector).method(duration, callback);<br>
+        $(selector).method(duration, eading, callback);<br><br>
+        duration: 이펙트가 지속되는 시간을 의미합니다. 1/1000밀리세컨드 단위이며, 'slow','normal','fast'표현합니다.<br>
+        easing : 이펙트 스피드를 조절하는 효과입니다.<br>
+        callback : 콜백함수는 스스로 호출되는 함수의 의미로 애미메이션 효과가 완료되면 자동으로 호출되는 함수를 말합니다.
+    </div>
+</body>
+</html>

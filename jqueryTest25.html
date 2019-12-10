@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+    <style>
+        * {padding: 0; margin: 0;}
+        a {text-decoration: none;}
+        img {display: block;}
+        h1 {padding: 20px;}
+    </style>
+
+</head>
+<body>
+  <h2>keyup</h2>
+  <div>
+      <p>글자 개수 파악하기</p>
+      <h1>10</h1>
+      <textarea name="text" id="text" cols="70" rows="10"></textarea>
+  </div>
+  
+    
+
+    
+  <script>
+      $("#text").keyup(function(){
+          var input = $(this).val().length;
+          var remain = 10 - input;
+          
+          $("h1").html(remain);
+          // h1은 개수로 바뀜
+          
+          if(remain >= 0){
+              $("p").css("color","blues");
+          } else {
+              $("p").css("color","red");
+              $("p").text("그만 입력하세요");
+          }
+      });
+    </script>
+</body>
+</html>

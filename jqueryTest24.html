@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+    <style>
+        * {padding: 0; margin: 0;}
+        a {text-decoration: none;}
+        img {display: block;}
+        h1 {text-align: center; padding: 40px 0;}
+        .select-wrap {text-align: center; margin:0 auto; width:100p}
+        
+    </style>
+    
+
+    
+    <script>
+        $(document).ready(function(){
+            $("#select").change(function(){
+                var url = $(this).val();
+                if(url){
+                    location.href="http://"+url;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Select Menu</h1>
+    <div class="select-wrap">
+      <select name="select" id="select">
+          <option value="www.naver.com">네이버</option>
+          <option value="www.daum.net">다음</option>
+          <option value="www.nate.com">네이트</option>
+          <option value="www.goggle.com">구글</option>
+      </select>
+      
+
+  </div>
+</body>
+</html>

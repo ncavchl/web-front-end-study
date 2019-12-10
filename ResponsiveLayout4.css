@@ -1,0 +1,44 @@
+body {
+	background-color: yellow;
+}
+
+#wrap {
+	width: 90%;
+	margin: 10px auto;
+	text-align: center;
+}
+/*버튼들 영역은 전체크기의 90퍼, 영역의 보더는 위에서 10픽셀 떨어짐  텍스트 들은 가운데 정렬*/
+.box {
+	width: 18%;
+	margin: 1%;
+	height: 60px;
+	background-color: white;
+	border-radius: 10px;
+	float: left
+}
+/*박스들은 각자 화면 크기의 18퍼 박스들 사이의 간격은 화면크기의 1퍼 높이 60픽셀 배경 하얀색 상자 테두리 곡률 10픽셀 /왼쪽부터 붙기 시작*/
+
+/*4 column 1024~960*/
+@media ( max-width: 1024px) {
+	.box {
+		width: 23%;
+	} /*한 줄에 4개 나오도록 23%로 설정*/
+}
+/*3 column 748~960*/
+@media ( max-width: 960px) {
+	.box {
+		width: 31.3333%;
+	}
+}
+
+/* 2 column 480~764*/
+		@media (max-width: 748px){
+			.box {width: 48%;}
+			
+		}
+/* 1 column */
+@media ( max-width: 480px) {
+	.box {
+		width: 100%;
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+   
+   
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none}
+        a{text-decoration: none;}
+        #tab-menu {overflow: hidden; width: 400px; margin: 50px auto;}
+        #tab-btn li {float: left; width: 80px; text-align: center;}
+        #tab-btn li a {background: #ccc; padding: 10px; display: block;}
+        #tab-cont {width: 320px; height: 300px; margin-top: 38px; }
+        #tab-cont.img1{background: url(./resource/images/img01.jpg) no-repeat; background-size: 320px;}
+        #tab-cont.img2{background: url(./resource/images/img02.jpg) no-repeat; background-size: 320px;}
+        #tab-cont.img3{background: url(./resource/images/img03.jpg) no-repeat; background-size: 320px;}
+        #tab-cont.img4{background: url(./resource/images/img04.jpg) no-repeat; background-size: 320px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#tab1").click(function(){
+                $("#tab-cont").removeClass().addClass("img1");
+            });
+            $("#tab2").click(function(){
+                $("#tab-cont").removeClass().addClass("img2");
+            });
+            $("#tab3").click(function(){
+                $("#tab-cont").removeClass().addClass("img3");
+            });
+            $("#tab4").click(function(){
+                $("#tab-cont").removeClass().addClass("img4");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tab-menu">
+        <div id="tab-btn">
+            <ul>
+                <li id="tab1"><a href="#">tab1</a></li>
+                <li id="tab2"><a href="#">tab2</a></li>
+                <li id="tab3"><a href="#">tab3</a></li>
+                <li id="tab4"><a href="#">tab4</a></li>
+            </ul>
+        </div>
+        <div id="tab-cont" class="img1">
+            
+        </div>
+    </div>    
+
+</body>

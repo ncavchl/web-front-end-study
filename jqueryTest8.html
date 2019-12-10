@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#append").click(function(){
+                $("#container").append(Img());
+            });
+        });
+		//실행되면 #append 아이디가 눌릴때 #container 아이디의 img함수가 실행되고 append로 요소가 추가되면서 실행됨
+        
+        
+        //랜덤으로 이미지 뽑기
+        function Img(){
+            var n = Math.ceil(Math.random()*5); // celi 반올림함수
+            var imgPath = "<img src='./resource/images/img0"+n+".jpg' width='200' height='200' alt='갱얼쥐''>"
+            return imgPath;
+        };
+
+    </script>
+</head>
+<body>
+    <button id="append" style="background-color:red;">append</button>
+    <div id="container" style="background-color:skyblue;">
+        <!--
+        <img src="assets/img/img01.jpg" width="200" alt="이미지">
+        <img src="assets/img/img02.jpg" width="200" alt="이미지">
+        <img src="assets/img/img03.jpg" width="200" alt="이미지">
+        <img src="assets/img/img04.png" width="200" alt="이미지">
+        <img src="assets/img/img05.jpg" width="200" alt="이미지">
+        -->
+    </div>
+</body>
+</html>

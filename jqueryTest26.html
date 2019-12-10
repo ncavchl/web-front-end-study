@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+
+
+    <style>
+        * {padding: 0; margin: 0;}
+        a {text-decoration: none;}
+        img {display: block;}
+        h1 {padding: 20px;}
+        #box {margin: 200px auto; width: 600px;}
+        #box span {background-color: antiquewhite; border-radius: 10px; display: inline-block; text-align: center; padding: 20px 40px; cursor: pointer;}
+        .hand {position: absolute; left: 0;top: 0; display: none;}
+
+    </style>
+    
+   <script>
+        $(document).ready(function(){
+          $(".hh1").hover(function(){
+            $(".h1").show();
+          },function(){
+              $(".h1").hide();
+          });
+          
+          $(".hh1").mousemove(function(e){
+              $(".h1").css("left",e.pageX+30).css("top",e.pageY-50);
+          });
+          
+          $(".hh2").hover(function(){
+              $(".h2").show();
+          },function(){
+              $(".h2").hide();
+          });
+          $(".hh2").mousemove(function(e){
+              $(".h2").css("left",e.pageX+30).css("top",e.pageY-50);
+          });
+          
+          $(".hh3").hover(function(){
+              $(".h3").show();
+          },function(){
+              $(".h3").hide();
+          });
+          $(".hh3").mousemove(function(e){
+              $(".h3").css("left",e.pageX+30).css("top",e.pageY-50);
+          });
+          
+          $(".hh4").hover(function(){
+              $(".h4").show();
+          },function(){
+              $(".h4").hide();
+          });
+          $(".hh4").mousemove(function(e){
+              $(".h4").css("left",e.pageX+30).css("top",e.pageY-50);
+          });
+        });
+    </script>
+</head>
+<body>
+  <h1>Mouse Move</h1>
+  
+  <div class="hand h1"><img src="./resource/images/cursor_img3.png" width="800"></div>
+  <div class="hand h2"><img src="./resource/images/cursor_img5.png" width="800"></div>
+  <div class="hand h3"><img src="./resource/images/cursor_img6.png" width="800"></div>
+  <div class="hand h4"><img src="./resource/images/cursor_img7.png" width="800"></div>
+  <div id="box">
+      <span class="hh1">Mouse1</span>
+      <span class="hh2">Mouse2</span>
+      <span class="hh3">Mouse3</span>
+      <span class="hh4">Mouse4</span>
+  </div>
+</body>
+</html>

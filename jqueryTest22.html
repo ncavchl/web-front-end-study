@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+ <style>
+        * {padding: 0; margin: 0;}
+        a {text-decoration: none;}
+        img {display: block;}
+        h1 {text-align: center; padding: 10px 0;}
+        ul {width: 1230px; margin: 20px auto; overflow: hidden;}
+        li {overflow: hidden; list-style: none; float: left; position: relative; margin-right: 10px; cursor: pointer;}
+
+/*전체 뿌연 부분*/
+        li span {opacity: 0; position: absolute; bottom: 0; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: block;}
+/*이미지 이름만 뿌연 부분*/
+        .cssEffect li em {opacity: 0; position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; box-sizing: border-box; background-color: rgba(0,0,0,0.7); color: #fff; transition: all 0.3s ease; z-index: 10;}
+
+        .cssEffect li:nth-child(1):hover em {opacity: 1;}
+        .cssEffect li:nth-child(1):hover span {opacity: 1;}
+
+        .cssEffect li:nth-child(2) em {opacity: 0; left:-100%;}
+        .cssEffect li:nth-child(2):hover em {opacity: 1; left:0;}
+        .cssEffect li:nth-child(2):hover span {opacity: 1;}
+
+        .cssEffect li:nth-child(3) em {opacity: 0; bottom: -100%;}
+        .cssEffect li:nth-child(3):hover em {opacity: 1; bottom:0;}
+        .cssEffect li:nth-child(3):hover span {opacity: 1;}
+
+        .jsEffect li em {opacity: 0; position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; box-sizing: border-box; 
+        background-color: rgba(0,0,0,0.7); color: #fff; z-index: 10;}
+    </style>
+    
+    <script>
+            var img = $('.jsEffect > ul > li');
+        
+            // img.filter(':nth-child(1)').on('mouseover',function(){
+            //     $(this).find('em, span').css("opacity","1");
+            // }).on('mouseout',function(){
+            //     $(this).find('em, span').css("opacity","0");
+            // });
+
+            img.filter(':nth-child(1)').on('mouseover',function(){
+                $(this).find('em, span').stop().animate({opacity:"1"},400);
+            }).on('mouseout',function(){
+                $(this).find('em, span').stop().animate({opacity:"0"},400);
+            });
+
+            img.filter(':nth-child(2)').on('mouseover',function(){
+                $(this).find('em, span').stop().animate({opacity:"1",left:"0"},400);
+            }).on('mouseout',function(){
+                $(this).find('em, span').stop().animate({opacity:"0",left:"-100%"},400);
+            });
+
+            img.filter(':nth-child(3)').on('mouseover',function(){
+                $(this).find('em, span').stop().animate({opacity:"1",bottom:"0"},400);
+            }).on('mouseout',function(){
+                $(this).find('em, span').stop().animate({opacity:"0",bottom:"-100%"},400);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>CSS Hover Effect</h1>
+    <div class="cssEffect">
+      <ul>
+        <li><img src="./resource/images/img01.jpg" width="400" alt=""><em>CSS EFFECT1</em><span></span></li>
+        <li><img src="./resource/images/img02.jpg" width="400" alt=""><em>CSS EFFECT2</em><span></span></li>
+        <li><img src="./resource/images/img05.jpg" width="400" alt=""><em>CSS EFFECT3</em><span></span></li>
+    </ul>  
+    </div>
+    <h1>JS Hover Effect</h1>
+    <div class="jsEffect">
+       <ul>
+        <li><img src="./resource/images/img01.jpg" width="400" alt=""><em>JS EFFECT1</em></li>
+        <li><img src="./resource/images/img02.jpg" width="400" alt=""><em>JS EFFECT1</em></li>
+        <li><img src="./resource/images/img05.jpg" width="400" alt=""><em>JS EFFECT1</em></li>
+    </ul> 
+    </div>
+</body>
+</html>

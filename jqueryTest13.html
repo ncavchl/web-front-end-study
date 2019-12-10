@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+   
+   
+       <style>
+        * {margin: 0; padding: 0;}
+        body {width: 2000px; height: 3000px;}
+        #scroll {position: fixed; left: 0; top: 0;}
+    </style>
+   
+   <script>
+    $(function(){
+        $(window).scroll(function(){
+            var sl = $(window).scrollLeft();
+            var st = $(window).scrollTop();
+            $(".sl").text(sl);
+            $(".st").text(st);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="scroll">
+        <span>scrollLeft =</span><span class="sl">0</span>
+        <span>scrollTop =</span><span class="st">0</span>
+    </div>
+</body>
+</html>

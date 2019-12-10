@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+div {
+	display: block;
+}
+img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+p{
+	margin: 0;
+	padding: 0;	
+    display: block;
+
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.clearfix {
+	zoom: 1;
+}
+
+/*서브메뉴*/
+.pageSubmenu ul li:nth-child(1){font-weight: bold; text-decoration: underline;}
+
+/*container*/
+.OKcontainer_sub{margin: 0 auto; width: 1200px;}
+
+/*production*/
+.OKProductionBox1 { padding: 120px 0 240px 0;} 
+.OKProductionInfo1_title {  font-family: BMDoHyeon;  font-size: 48px;  font-weight: normal;  
+font-style: normal; font-stretch: 4em;  line-height: 1.21;  letter-spacing: normal;  text-align: center;  color: var(--navy)}
+.OKProductionInfo1_subtitle {  font-family: BMDoHyeon;  font-size: 1.5em;  font-weight: normal;  font-style: normal;  font-stretch: normal; 
+line-height: 1.67;  letter-spacing: normal;  text-align: center;  color: #231815; margin-top: 50px;}
+
+.OKPIcontent {float: left; width: calc(50% - 10px); margin-right: 20px; margin-top: 50px;}
+.OKPIcontent:nth-child(2n) { margin-right: 0;}
+.OKPIcontentTitle {font-size: 1.7em; line-height: 1.6;  font-family: BMDoHyeon;  letter-spacing: normal;text-align: center; color: #231815;
+margin-top: 10px;}
+.OKPIcontentText{ margin-top: 10px; font-family: SpoqaHanSans; font-size: 1.5em; line-height: 1.27;  letter-spacing: normal;
+  text-align: left;  color: #231815;}
+.OKPIcontent:nth-child(2n) { margin-right: 0; }
+
+.OKProductionBox2 { padding: 120px 0 240px 0;background-color: #e5f9f7;}
+.OKProductionInfo2_title {font-family: BMDoHyeon; font-size: 4em; text-align: center; line-height: 1.21;  letter-spacing: normal; 
+  font-weight: normal;  font-style: normal; font-stretch: normal; }
+.OKProductionInfo2_subtitle {  font-family: BMDoHyeon;  font-size: 1.5em;  font-weight: normal;  font-style: normal;  font-stretch: normal; 
+line-height: 1.67;  letter-spacing: normal;  text-align: center;  color: #231815; margin-top: 50px;}
+.OKProductionBox2 img{width: 920px; margin: 0 auto; display: block; margin-top:25px;}
+
+/*distribution*/
+.OKdistributionInfoBox1{ padding: 120px 0 240px 0;}
+.OKdistributionInfoBox2{ padding: 120px 0 240px 0;}
+.OKdistributionInfoBox3{ padding: 120px 0 240px 0;}
+
+.OKdistributionInfo1_title{ font-family: BMDoHyeon;  font-size: 48px;  font-weight: normal;  
+font-style: normal; font-stretch: 4em;  line-height: 1.21;  letter-spacing: normal;  text-align: center; }
+.OKdistributionInfo3_title{ font-family: BMDoHyeon;  font-size: 48px;  font-weight: normal;  
+font-style: normal; font-stretch: 4em;  line-height: 1.21;  letter-spacing: normal;  text-align: center; }
+
+
+.OKdistributionInfoBox1 img {margin-top: 25px;}
+.OKdistributionInfoBox2 img {margin-top: 25px;}
+.OKdistributionInfo2_mintitle {font-family: BMDoHyeon; font-size: 3em; text-align: center; line-height: 1.21;  letter-spacing: normal; 
+  font-weight: normal;  font-style: normal; font-stretch: normal; }
+.OKdistributionInfo3_subtitle {  font-family: BMDoHyeon;  font-size: 1.5em;  font-weight: normal;  font-style: normal;  font-stretch: normal; 
+line-height: 1.67;  letter-spacing: normal;  text-align: center;  color: #231815; margin-top: 50px;}
+.OKdistributionInfoBox3 img{width: 920px;   margin: 0 auto; display: block; margin-top: 25px;} /*margin 이랑 display 없으면 중앙정렬 안함*/
+
+
+/*connectbox*/
+#OKcoWorkConnect {position: relative;}
+.OKcoWorkConnetBox { position: absolute; left: 10%; top: 50%; transform: translateY(-50%);}
+.OKcoWorkConnectTitle {font-family: BMDoHyeon; font-size: 3em; text-align: left; line-height: 1.21;  letter-spacing: normal; 
+  font-weight: normal;  font-style: normal; font-stretch: normal; }
+button {border: 1px solid black; border-radius: 20px; width: 60%; height: 2.5em; margin: 0 auto; margin-top: 15px}
+.OKcoWorkConnetBox img {width: 10px; }
+
+
+/*media query*/
+@media(max-width:1500px){
+	.OKcontainer_sub {width: 95%;}
+/*connectbox*/
+.OKcoWorkConnectTitle{ font-size: 2.5em;}
+}
+
+@media(max-width:1200px){
+/*production*/
+.OKProductionBox1 { padding: 100px 0 200px 0;} 
+.OKProductionInfo1_title {font-size: 3em;}
+.OKProductionInfo1_subtitle {margin-top: 40px;font-size: 1.4em;}
+.OKPIcontentTitle {font-size: 1.6em;}
+.OKPIcontentText {font-size: 1.4em;}
+
+.OKProductionBox2 { padding: 100px 0 200px 0;}
+.OKProductionInfo2_title {font-size: 3em;}
+.OKProductionInfo2_subtitle {margin-top: 40px;font-size: 1.4em;}
+.OKProductionBox2 img{width: 90%;}
+
+/*distribution*/
+.OKdistributionInfoBox1{ padding: 100px 0 200px 0;} 
+.OKdistributionInfoBox2{ padding: 100px 0 200px 0;} 
+.OKdistributionInfoBox3{ padding: 100px 0 200px 0;} 
+
+.OKdistributionInfo1_title{font-size: 3em;}
+.OKdistributionInfo2_mintitle {font-size: 2.5em;}
+.OKdistributionInfo3_title{font-size: 3em;}
+.OKdistributionInfo3_subtitle {margin-top: 40px;font-size: 1.4em;}
+.OKdistributionInfoBox3 img{width: 90%;}
+
+/*connectbox*/
+.OKcoWorkConnectTitle{ font-size: 2em;}
+.buttonText {font-size: 1.0em;}
+}
+
+
+@media (max-width: 850px){
+/*production*/
+.OKProductionBox1 { padding: 50px 0;} 
+.OKProductionInfo1_title {font-size: 2em;}
+.OKProductionInfo1_subtitle {margin-top: 20px;font-size: 1.2em;}
+.OKPIcontentTitle {font-size: 1.4em;}
+.OKPIcontentText {display: none;}
+
+.OKProductionBox2 { padding: 50px 0;}
+.OKProductionInfo2_title {font-size: 2em;}
+.OKProductionInfo2_subtitle {margin-top: 20px;font-size: 1.2em;}
+.OKProductionBox2 img{width: 90%;}
+
+/*distribution*/
+.OKdistributionInfoBox1{ padding: 50px 0;}
+.OKdistributionInfoBox2{ padding: 50px 0;}
+.OKdistributionInfoBox3{ padding: 50px 0;}
+
+.OKdistributionInfo1_title{font-size: 2em;}
+.OKdistributionInfo2_mintitle {font-size: 1.8em;}
+.OKdistributionInfo3_title{font-size: 2em;}
+.OKdistributionInfo3_subtitle {display: none;}
+
+/*connectbox*/
+.OKcoWorkConnectTitle{ font-size: 1.5em;}
+.buttonText {font-size: 0.8em;}
+
+}
+
+
+@media (max-width: 500px){
+/*production*/
+.OKProductionInfo1_title {font-size: 1.5em; }
+.OKProductionInfo1_subtitle {display: none;}
+.OKPIcontentTitle {font-size: 1.2em;}
+.OKProductionInfo2_subtitle {display: none;}
+
+/*distribution*/
+.OKdistributionInfo1_title{font-size: 1.5em;}
+.OKdistributionInfo2_mintitle {font-size: 1.3em;}
+.OKdistributionInfo3_title{font-size: 1.5em;}
+
+/*connectbox*/
+.OKcoWorkConnectTitle{ font-size: 1em;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

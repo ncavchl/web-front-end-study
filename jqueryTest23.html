@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+
+    <style>
+        * {padding: 0; margin: 0;}
+        a {text-decoration: none;}
+        img {display: block;}
+        h1 {text-align: center; padding: 10px 0;}
+        
+        .imgHover {width: 1230px; margin: 20px auto; overflow: hidden;}
+        .imgHover > div {float: left; width: 400px; height: 300px;}
+        .imgHover > div img:nth-child(1) {position: absolute;}
+        .imgHover > div img:nth-child(2) {opacity:0;}
+    </style>
+    
+    
+    <script>
+        $(document).ready(function(){
+            //쓰는 방법 1
+            // $(".imgHover").on("mouseover",function(){}).on("mouseout",function(){})
+
+            // 쓰는 방법 2
+            // $(".imgHover>div").on({mouseover:function(){},mouseout:function(){}})
+            
+            $(".imgHover>div").on({mouseover:function(){
+                $(this).find("img:nth-child(1)").stop().animate({opacity:0},600)
+                $(this).find("img:nth-child(2)").stop().animate({opacity:1},600)
+            },mouseout:function(){
+                $(this).find("img:nth-child(1)").stop().animate({opacity:1},600)
+                $(this).find("img:nth-child(2)").stop().animate({opacity:0},600)
+            }});
+        });
+    </script>
+</head>
+<body>
+    <h1>Images Hover Effect</h1>
+    <div class="imgHover">
+        <div class="img1">
+            <img src="./resource/images/img01.jpg" alt="" width="400">
+            <img src="./resource/images/img02.jpg" alt="" width="400">
+        </div>
+        <div class="img2">
+            <img src="./resource/images/img05.jpg" alt="" width="400">
+            <img src="./resource/images/img02.jpg" alt="" width="400">
+        </div>
+        <div class="img3">
+            <img src="./resource/images/img02.jpg" alt="" width="400">
+            <img src="./resource/images/img01.jpg" alt="" width="400">
+        </div>
+    </div>
+</body>
+</html>

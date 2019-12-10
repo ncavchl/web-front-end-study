@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+    <script>    //자바스크립트
+        window.onload = function(){
+            var list1 = document.getElementById("list1");
+            var liList = list1.getElementsByTagName("li");
+            
+            for(var i=0; i<liList.length; i++){
+                var li = liList[i];
+                li.style.color = "#f00";
+            }
+        };
+    </script>
+    <script> //제이쿼
+        $(document).ready(function(){
+            $("#list2 li").css("color","blue")
+        });
+    </script>
+</head>
+
+
+<body>
+
+    <h3>jQuery</h3>
+    <ul id="list1" class="list">
+        <li class="one1">one1</li>
+        <li class="one2">one2</li>
+        <li class="one3">one3</li>
+        <li class="one4">one4</li>
+        <li class="one5">one5</li>
+        <li class="one6">one6</li>
+        <li class="one7">one7</li>
+        <li class="one8">one8</li>
+        <li class="one9">one9</li>
+        <li class="one10">one10</li>
+    </ul>
+    <ul id="list2" class="list">
+        <li class="one1">one1</li>
+        <li class="one2">one2</li>
+        <li class="one3">one3</li>
+        <li class="one4">one4</li>
+        <li class="one5">one5</li>
+        <li class="one6">one6</li>
+        <li class="one7">one7</li>
+        <li class="one8">one8</li>
+        <li class="one9">one9</li>
+        <li class="one10">one10</li>
+    </ul>
+</body>
+</html>
+

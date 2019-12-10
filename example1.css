@@ -1,0 +1,47 @@
+html, body {
+	height: 100%;
+}
+
+
+	/*background-image: url('./resource/images/image.jpg) no-repeat;*/
+
+	
+	body{
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/17/10/55/hot-air-balloon-2411851_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+}
+	/*cover - 화면사이즈에 맞춰져서 작아짐(조금 자르거나 잘라서) / */
+	
+	#wrap div{
+	color: white;
+	text-align: center;
+	}
+	
+	#wrap{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	}
+	
+	#wrap div:first-child{
+	margin-bottom: 40px;
+
+	}
+	
+	#wrap div:nth-child(2){
+	border-top: 2px solid white;
+	paddin-top: 40px;
+	}
+	
+@media all and (min-width:980px) {
+  #wrap div:first-child{
+    font-size: 2rem;
+  }
+}
+			
+	}

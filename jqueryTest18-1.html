@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+    <style>
+        .box {width: 50px; height: 50px; background-color: orange; position: relative; margin: 1px; cursor: pointer;}
+    </style>
+    
+  <script>
+        $(document).ready(function(){
+            $(".box").hover(function(){
+                $(this).animate({left:500, width:500},600);
+            },function(){
+                $(this).animate({left:0, width:50},600);
+            });
+
+            $(".box").click(function(){
+            	var ran1 = "#";
+            	var ran2 = Math.random()*100000;
+            	var ran = ran1 + ran2;
+            	//var ran = Math.random() * 10000;
+                $(".box").css("background-color", ran);
+            });
+            
+            $(".btn1").click(function(){
+                $(".box").animate({width: '+=50', height:'+=50'},'slow');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button class="btn1">Size</button>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

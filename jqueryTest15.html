@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+   
+   
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none}
+        a{text-decoration: none;}
+        #tab-menu {overflow: hidden; width: 400px; margin: 50px auto;}
+        #tab li {float: left; width: 80px; text-align: center;}
+        #tab li a {background: #ccc; padding: 10px; display: block;}
+        #tab li a.active {background: black; color:#fff;}
+        #content {width: 320px; height: 345px; margin-top: 38px; }
+  
+    </style>
+    <script>
+        $(document).ready(function(){
+            var tab = $("#tab > ul > li");
+            var content = $("#content > div")
+            
+            tab.click(function(){
+                var tg = $(this);       //클릭한 버튼 타겟을 변수에 할당
+                var tc = tg.find(">a");     //this의 a 태그 자식 엘리먼트를 선택
+                tab.find(">a").removeClass("active");       //active를 삭제
+                tc.addClass("active");
+                var index = tg.index();     //클릭한 요소한테 인덱스를 할당
+                //alert(index);
+                content.css("display","none");
+                content.eq(index).css("display","block");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="tab-menu">
+        <div id="tab">
+            <ul>
+                <li id="tab1"><a href="#" class="active">tab1</a></li>
+                <li id="tab2"><a href="#" >tab2</a></li>
+                <li id="tab3"><a href="#" >tab3</a></li>
+                <li id="tab4"><a href="#" >tab4</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div><img src="./resource/images/img01.jpg" width="320" alt="">contents1</div>
+            <div><img src="./resource/images/img02.jpg" width="320" alt="">contents2</div>
+            <div><img src="./resource/images/img03.jpg" width="320" alt="">contents3</div>
+            <div><img src="./resource/images/img04.jpg" width="320" alt="">contents4</div>
+        </div>
+    </div>    
+
+</body>
+
+</html>

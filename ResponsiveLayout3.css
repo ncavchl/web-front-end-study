@@ -1,0 +1,38 @@
+R		*{padding: 0; margin: 0;}
+		#wrap {width: 960px; height: 700px; margin: 0 auto; }
+		.box1 {width: 30%; height: 700px; background-color: red; float: left;}
+		.box2 {width: 70%; height: 200px; background-color: green; float: left;}
+		.box3 {width: 70%; height: 500px; background-color: blue; float: left;}
+		
+
+		
+		@media (max-width: 960px){
+		#wrap {width: 90%;}
+		}
+
+		@media (max-width: 768px){
+		#wrap {width: 100%;}
+				.box1 {width: 100%; height: 200px; float: none;}
+				.box2 {width: 100%; height: 300px; float: none;}
+				.box3 {width: 100%; height: 200px; float: none;}
+
+		}
+		@media (max-width: 480px){
+		#wrap {width: 100%;}
+				.box1 {width: 100%; height: 100px; float: none;}
+				.box2 {width: 100%; height: 500px; float: none;}
+				.box3 {width: 100%; height: 100px; float: none;}
+
+		}
+		
+		
+		
+		/*
+		초기값 설정 - 박스 3개가 왼쪽으로 붙는데 박스 1의 30퍼에 맞춰서 붙어짐  
+		960~768의 90퍼센트 크기로 나옴
+		480~768 전체가 세로 일렬로 나옴
+		0~480 높이가 달라져서 세로 일렬로 나옴 
+		
+		*/
+		
+		

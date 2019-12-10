@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+    <style>
+        .img {margin:0px; display: flex; align-items: center; justify-content: center; height: 100vh;}
+    </style>
+    
+    <script>
+        $(document).ready(function(){
+            function loop(){
+                $(".img").animate({marginTop:0},500).animate({marginTop:20},500, loop)
+            }
+            loop();
+        });
+    </script>
+</head>
+<body>
+    <div class="img">
+        <img src="./resource/images/img03.jpg" width="500">
+    </div>
+</body>
+</html>

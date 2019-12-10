@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+    <style>
+         *{margin: 0; padding: 0;}
+        li{list-style: none}
+        a{text-decoration: none;}
+        #wrapper {border: 10px solid red; padding: 100px; margin: 20px; }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <span>박스의 width = </span><span id="width">0</span><br>
+        <span>박스의 height = </span><span id="height">0</span><br>
+        <span>박스의 innerWidth = </span><span id="innerWidth">0</span><br>
+        <span>박스의 innerHeight = </span><span id="innerHeight">0</span><br>
+        <span>박스의 outerWidth = </span><span id="outerWidth">0</span><br>
+        <span>박스의 outerHeight = </span><span id="outerHeight">0</span>
+    </div>
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+   <script>
+        var box = $("#wrapper");
+        $(window).resize(function(){
+            $("#width").text(box.width());
+            $("#height").text(box.height());
+            $("#innerWidth").text(box.innerWidth());
+            $("#innerHeight").text(box.innerHeight());
+            $("#outerWidth").text(box.outerWidth());
+            $("#outerHeight").text(box.outerHeight());
+        });
+    </script>
+    
+</body>
+</html>

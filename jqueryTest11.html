@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+   <style>
+        .btn {width: 100px; text-align: center; background-color: blue; padding: 20px; display: block; border-radius: 
+        20px 0; margin: 0 auto; color: #fff;}
+        /*가운데 오는 방법*/
+        /*.center {position: absolute; left: 50%; top:50%; margin-left: -50px; margin-top: -70px;}*/
+        /*.center {position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%)}*/
+        /*.center {position: absolute; left: 0; top: 0; right: 0; bottom: 0; margin:auto; height: 30px;}*/
+        .flex {display: flex; align-items: center; justify-content: center; width: 100vw; height: 100vh;}
+
+        .layer {display: none; background: linear-gradient(120deg, #64b3f4  50%, #f33b4e  50%); font-size: 40px; color: #fff; 
+        width: 500px; height: 500px; text-align: center; line-height: 500px;}
+        /*{width: 500px; height: 500px; line-height: 500px; color: #fff; text-align: center; font-size: 40px;
+         position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%); 
+         background: linear-gradient(120deg, #f8bfa4  50%, #f33b4e  50%);}*/
+    </style>
+    <script>
+        $(document).ready(function(){
+            //백스라운드 색을 넣으세요
+            $("body").css("background-color","tomato");
+
+            //.layer 한테 position 값을 설정
+            $(".layer").css({position:"absolute", left:"0", top:"0"});
+
+            //버튼을 클릭했을 때
+            $(".btn").click(function(){
+                var wWidth = $(window).width();     //현재 브라우저의 width을 저장
+                var wHeight = $(window).height();   //현재 브라우저의 height을 저장
+                //alert(wWidth);
+                var iWidth = $(".layer").width();   //버튼의 width을 저장
+                var iHeight = $(".layer").height(); //버튼의 height을 저장
+                //alert(iWidth);
+                
+                //left: 50%; margin-left: -100px;
+                $(".layer").css("left", wWidth/2 - iWidth/2);
+                $(".layer").css("top", wHeight/2 - iHeight/2);
+
+                // $(".layer").css("display","block");
+                //$(".layer").show();
+                $(".layer").slideDown();
+                //$(".layer").fadeIn();
+
+            });
+
+            
+            //박스가 사라지는 효과 여러가지 있음 
+                $(".closed").click(function(){
+               // $(".layer").css("display","none");
+                //$(".layer").hide();
+               // $(".layer").slideUp();
+                $(".layer").fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="flex">
+        <a href="#"><span class="btn center">button</span></a>
+    </div>
+
+    <div class="layer">
+        Layer Box
+        <a href="#" class="closed">X</a>
+    </div>
+</body>
+</html>
+    

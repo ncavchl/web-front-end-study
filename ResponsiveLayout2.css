@@ -1,0 +1,35 @@
+#wrap {width: 960px; height: 700px; margin: 0 auto;}
+		.box1 {width: 30%; height: 700px; background-color: #00c853; float:left;}
+		.box2 {width: 40%; height: 700px; background-color: #f57f17; float:left;}
+		.box3 {width: 30%; height: 700px; background-color: #aeea00; float:left;}
+
+		@media (max-width: 970px){
+			#wrap{width: 95%;}
+		}
+
+		@media (max-width: 768px){
+			#wrap{width: 100%;}
+			.box1 {width: 40%; float:left;} 
+			.box2 {width: 100%; float:none;}
+			.box3 {width: 100%; float:none;}
+		}
+
+		@media (max-width: 480px){
+			.box1 {width: 100%; float: none;}
+		}
+		
+/*
+wrap 설정 - 초기 크기 설정
+970 이상은 박스들이 960px로 나옴
+768~970은 전체 wrap 크기가 95%로 줄어서 나옴
+480~768은 박스1은 960의 40퍼 비율, 박스2는 나머지 전체 크기의 60퍼 비율에 맞춰져서 나옴
+		박스 3은 그 밑에 전체 크기 width 에 맞춰서 나옴 
+		근데 박스 2 3 의 float를 설정하면 이상하게 나옴 
+0~480은 박스 1이 100퍼 이므로 나머지 2,3 도 100퍼 로 맞춰서 세로로 배열되어 나옴 
+
+오류시 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+코드 html 에 있나 확인하기 
+기기에 따라 화면 비율 맞춰져서 나옴 
+*/
+

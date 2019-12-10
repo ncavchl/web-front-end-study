@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+
+   <script>
+        $(document).ready(function(){
+        	
+        	/*.eq() :eq() 둘다 인덱스로 2 즉 3번째꺼 선택하므로 결과는 같지만 성능차이가 있음 */
+           $(".list li").eq(2).css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+//         $(".list li:eq(2)").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+		/*one5 인 리스트 테두리침*/
+//           $(".list li").filter(".one5").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+	    /*첫번재 요소 체크*/
+//       $(".list li").first().css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+	    /*맨 마지막 요소 선택인데 여기서는 맨 마지막꺼가 hidden 되어 있으므로 체크 안됨/ 공간은 남아있음 */
+//        $(".list li").last().css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+		/*각 li들 중에서 ul갖고 있는 것들 */
+//        $(".list li").has("ul").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+		/*5 적힌거 빼고 */	
+//		$(".list li").not(".one5").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+
+		/*slice(a, b) a부터  b전까지 선택 / 인덱스 0번 부터 */
+//		$(".list li").slice(3,8).css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+        });
+    </script>
+</head>
+
+<body>
+    <h3>JQuery Sample</h3>
+    <div id="list1" class="list">
+        <ul>
+            <li class="one1"><a href="#list2">one1</a></li>
+            <li class="one2"><a href="http://naver.com">one2</a></li>
+            <li class="one3"><a href="http://www.daum.net">one3</a></li>
+            <li class="one4"><a href="http://jjgodcom.com/" title="바로가기">one4</a></li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7"></li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10</li>
+        </ul>
+        <ul id="list2" class="list">
+            <li class="one1">one1</li>
+            <li class="one2">one2</li>
+            <li class="one3">one3</li>
+            <li class="one4">one4</li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7">one7</li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10
+                <ul>
+                    <li>one10-1</li>
+                    <li style="width:0; height: 0; overflow: hidden;">one10-2</li>
+                    <li style="opacity: 0;">one10-3</li>
+                    <li style="visibility: hidden;">one10-4</li>
+                    <li style="display: none">one10-5</li>
+
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+
+</html>

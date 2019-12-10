@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+        	/*자식을 - 1차 리스트 뭉땡이 안에 리스트 있고 그 안에 차일드로 2리스트 뭉땡이가 있는데 그것들이 선택됨/ 두번째 one1~10* */
+//          $(".list").children("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*자손을 - 클래스 .list들인거의 모든 자식 li들인거 테두리 - 다 테두리 쳐짐 */
+//          $(".list").find("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*리스트 클래스 중 li로 된거 전부 다 */
+//          $(".list li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");            
+
+			/*one4의 전 꺼 one3 에다가 침 */
+//          $(".one4").prev("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*인덱스 아님 / 각 리스트 뭉뗑이들의 3번재 요소 즉 one3만 침 */
+//          $("li:nth-child(3)").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*text 내용 중 one3 포함된거에 침 */
+//            $("li:contains('one3')").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*one2의 바로 다음 태그에 테두리 */
+//           $(".one2+li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*인덱스 번호 즉 3번재꺼 만 테두리 침  */
+//            $(".list li:eq(2)").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+  
+			/*one4 전꺼들이 쳐짐 / 각 리스트 뭉땡이 별로 */
+//            $(".one4").prevAll("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*이건 또 (전체 개수)인덱스 0부터라 4번재 전꺼 1~3번째 리스트들만 테두리 쳐짐*/
+//            $("li:lt(3)").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+			
+			/*one4의 다음 형제만 테두리 쳐짐 */
+//            $(".one4").next("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*one4의 다음 형제 요소들이 테두리 쳐짐*/
+//          $(".one4").nextAll("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+            
+            /*one4와 형제관계인 것들은 테두리가 쳐짐 / 대신 형제들의 자식은 X / one4는 안쳐짐 */
+//          $(".one4").siblings("li").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*인덱스는 0번 부터인데 3 즉 4번째 리스트는 테두리 안침 */
+//          $("li:not(:eq(3))").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+
+			/*각 리스트 들의 4번재 (0번째부터 아님)만 선택하여 테두리 안침 */			
+            $("li:not(:nth-child(4))").css("background-color","#bbdefb").css("border","3px dashed #303f9f");
+        
+            
+        });
+    </script>
+</head>
+
+<body>
+    <h3>JQuery Sample</h3>
+    <div id="list1" class="list">
+        <ul>
+            <li class="one1"><a href="#list2">one1</a></li>
+            <li class="one2"><a href="http://naver.com">one2</a></li>
+            <li class="one3"><a href="http://www.daum.net">one3</a></li>
+            <li class="one4"><a href="http://jjgodcom.com/" title="바로가기">one4</a></li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7"></li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10</li>
+        </ul>
+ 
+        <ul id="list2" class="list">
+            <li class="one1">one1</li>
+            <li class="one2">one2</li>
+            <li class="one3">one3</li>
+            <li class="one4">one4</li>
+            <li class="one5">one5</li>
+            <li class="one6">one6</li>
+            <li class="one7">one7</li>
+            <li class="one8">one8</li>
+            <li class="one9">one9</li>
+            <li class="one10">one10
+                <ul>
+                <!-- 밑에 visibility랑 display는 위치가 제거되지 않아 공백칸 2개가 나옴 -->
+                    <li>one10-1</li>
+                    <li style="width:0; height: 0; overflow: hidden;">one10-2</li>
+                    <li style="opacity: 0;">one10-3</li>   <!-- 위치는 제거 안됨 -->
+                    <li style="visibility: hidden;">one10-4</li> <!-- 위치는 제거 안됨 -->
+                    <li style="display: none">one10-5</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+

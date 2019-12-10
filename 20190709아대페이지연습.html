@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹페이지 예제</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./resource/css/reset.css" rel="stylesheet">
+<link href="./resource/css/test.css" rel="stylesheet">
+
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+<script>
+	$(document)
+			.ready(
+					function() {
+
+						var tab = $("#menu > ul > li > a");
+
+						
+						/*오류 - 링크 걸린 글자는 hover text 변경이 안됨 */
+						$(tab).hover(function() {
+							$(this).css({
+								"background-color" : "#f0ffff",
+								"color" : "#014693",
+								"text-decoration" : "underline"
+							});
+						}, function() {
+							$(this).css({
+								"background-color" : "#014693",
+								"color" : "white",
+								"text-decoration" : "none"
+							});
+						});
+
+						
+					});
+</script>
+
+
+</head>
+
+<body>
+
+
+	<!-- 전체 영역 -wrap -->
+	<div id="wrap">
+
+		<div id="header">
+			<div class="headerTop">
+				<div class="container">
+					<div class="headerTopBox">
+						<!-- 					<h1 style="color: red;">테스트</h1>-->
+
+						<div class="hdtb" style="margin-top: 7px;">
+							<a><img
+								src="https://www.ajou.ac.kr/_resources/main/img/index/btn_search.gif"></a>
+						</div>
+						<div class="hdtb">
+							<input type="text" name="search-box"
+								style="width: 110px; height: 19px;"></input>
+						</div>
+						<div class="hdtb" style="margin: 7px;">
+							<img
+								src="https://www.ajou.ac.kr/_resources/main/img/index/btn_language.gif">
+						</div>
+						<div class="hdtb">
+							<a href="https://mportal.ajou.ac.kr/main.do" target="_blank"><img
+								src="https://www.ajou.ac.kr/_resources/main/img/index/potal.gif"></a>
+						</div>
+						<div class="hdtb">
+							<a href="https://sso.ajou.ac.kr/jsp/sso/ip/login_form.jsp"><img
+								src="https://www.ajou.ac.kr/_resources/main/img/index/login.gif"></a>
+						</div>
+						<div class="hdtb">
+							<a href="https://www.ajou.ac.kr/main/index.jsp"><img
+								src="https://www.ajou.ac.kr/_resources/main/img/index/home.gif"></a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="headerMain">
+				<div class="container">
+					<div class="logo">
+						<a href="https://www.ajou.ac.kr/main/index.jsp"><img
+							src="https://www.ajou.ac.kr/_resources/main/img/gnb/gnb_ajoulogo.png"
+							style="padding: 20px;"></a>
+					</div>
+
+					<div id="menu">
+						<ul>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/index.jsp">학교소개</a></li>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/admission/intro.jsp">입학/교육</a></li>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/research/intro.jsp">연구/산학</a></li>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/life/edu01.jsp">학사지원</a></li>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/life/convenience00.jsp">대학생활</a></li>
+							<li id="menuTab"><a
+								href="https://www.ajou.ac.kr/main/ajou/notice.jsp">아주광장</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div id="Container">
+			<div class="container-all">
+				<div class="sub1">
+					<div class="sub1-container">
+						<div class="sub1-container-box">이 안에 메뉴별 리스트들 들어가기</div>
+					</div>
+				</div>
+
+				<div class="sub2">
+					<div class="sub2-container">
+						<br> <br> <br> <br>
+						<h1 id="title1">
+							<b>연구/산학</b>
+						</h1>
+
+						<div class="box-container">
+							<div class="box">1</div>
+							<div class="box">2</div>
+							<div class="box">3</div>
+							<div class="box">4</div>
+							<div class="box">5</div>
+							<div class="box">6</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="footer-container">
+				<div class="footer1">
+					<div id="menu2">
+						<ul>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/guide/policy.jsp"><b>개인정보처리방침</b></a></li>
+							<li id="menuTab2"><a
+								href="http://www.academyinfo.go.kr/index.do">대학정보공시</a></li>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/intro/budget_2019.jsp">예/결산공고</a></li>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/guide/evaluation.jsp">대학자체평가</a></li>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/guide/service01.jsp">행정서비스헌장맵</a></li>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/guide/sitemap.jsp">사이트맵</a></li>
+							<li id="menuTab2"><a
+								href="https://www.ajou.ac.kr/main/guide/use01.jsp">홈페이지이용안내</a></li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="footer2">
+					<p style="margin-top: 30px;">
+						우) 16499 경기도 수원시 영통구 월드컵로 206 <b>아주대학교</b> TEL.031-219-2114
+					</p>
+					<p>
+						Copyright ⓒ 2017 Ajou University. All Rights Reserved. <a>▣<b>Webmaster</b></a>
+					</p>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

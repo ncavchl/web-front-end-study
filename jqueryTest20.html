@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+
+    <style>
+        body {font-size: 12px dotum, "돋움", sans-serif;}
+        /*초기 설정*/
+    </style>
+    
+    
+    <script>
+        $(document).ready(function(){
+            var size = 12;
+
+            $(".zoom button").on("click",function(){
+                var btn_index = $(this).index();
+                //alert(btn_index);
+
+                if(btn_index == 0){
+                    size++;
+                    $(".text-wrap").css("font-size", size+"px");
+                } else if(btn_index == 2){
+                    size--;
+                    $(".text-wrap").css("font-size", size+"px");
+                } else {
+                    $(".text-wrap").css("font-size","12px");
+                    size = 12;
+                }
+            });
+
+            $("#fs").on("change",function(){
+                $(".text-wrap").css("font-family",$(this).val());
+            });
+
+
+
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="btn">
+        <div class="zoom">
+            글자크기
+            <button>+</button>
+            <button>0</button>
+            <button>-</button>
+        </div> 
+        <div class="font">
+            폰트바꾸기
+            <select id="fs" name="fs">
+                <option value="Nonum Gothic,'나눔고딕'">나눔고딕</option>
+                <option value="Nonum Myeongjo,'나눔명조'">나눔명조</option>
+                <option value="Malgun Gothic,'맑은고딕'">맑은고딕</option>
+                <option value="dotum,'돋움'">돋움</option>
+                <option value="gulim,'굴림'">굴림</option>
+                <option value="Gungsuh,'궁서'">궁서</option>
+               // <option value="ff">롸</option>
+            </select>
+        </div> 
+    </div>
+
+    <dvi class="text-wrap">
+        <p>연재 초창기부터 주인공이 히든 캐릭터가 되었음에도 불구하고 어느 정도 적절히 갖춰진 밸런스에다가 예술계 직업이 주인공이라는 특이한 설정, 일반 양판소보다는 그나마 나아보이는 문체, 나름의 스토리 전개로 겜판소 중에서는 상당한 입지를 갖춘 작품이다. 분량이 20권이 넘어가면서부터 안좋은 시선이 상당히 늘어나며 여러 가지 단점들이 지적받고 있지만 그래도 여전히 높은 인기를 구가하는 중. 2010년 6월 8일자 기사에서 25만부 이상 팔렸다는 이야기가 나왔는데, 이 이야기대로라면 2011년 1월 쯤에는 30만부 돌파라는 소리. 2000년대 초반에 레드 오션이 되고 나서 계속된 추락으로 처참해진 지금의 장르문학 시장을 생각하면 어마어마한 성공이다. 그리고 2012년 7월 15일 작가가 밝히기로 40만부는 돌파했다고 한다. 어마어마하다. 2013년 1월에는 20쇄 증판. 2013년 10월 기준으로 60만부. 다만 외국 시장과는 연이 없는 상태. 작가 말로는 연락만 오면 팔고 싶은데 수출 제의가 전혀 없다고 한다. 왠지 안습. 권수를 보고 질린 게 아닐까 싶다 1권은 미국에서 출간한 적이 있었는데 그쪽 회사 문제로 인해 더 이상 출간되지 않고 있다고 한다.</p>
+    </dvi>
+</body>
+</html>

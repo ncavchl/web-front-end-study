@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+    <style>
+        #wrapper {position: absolute; width: 500px; height: 500px; left: 100px; top: 100px;}
+        #box {width: 200px; height: 100px; position:absolute; left: 50px; top: 50px; background-color: antiquewhite; border: 3px solid red; text-align: center; 
+            line-height: 100px;}
+    </style>
+   <script>
+    $(function(){
+        
+        var box = $("#box");
+        var offset = $("#offset");
+        
+        box.draggable({
+            drag:function(){
+                offset.find(".ol").text(box.offset().left);
+                offset.find(".ot").text(box.offset().top);
+                offset.find(".pl").text(box.position().left);
+                offset.find(".pt").text(box.position().top);
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="offset">
+        <span>offset().left = </span><span class="ol">0</span><br>
+        <span>offset().top = </span><span class="ot">0</span><br>
+        <span>position().left = </span><span class="pl">0</span><br>
+        <span>position().top = </span><span class="pt">0</span>
+    </div>
+    
+    <div id="wrapper">
+        <div id="box">box</div>
+    </div>
+</body>
+</html>

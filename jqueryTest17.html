@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Layout Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- /*<link href="./resource/css/test.css" rel="stylesheet">-->
+<script src="./resource/js/jquery-3.4.1.min.js"></script>
+<script src="./resource/js/jquery-ui.min.js"></script>
+
+
+    <style>
+        .img {width: 400px; height: 300px; overflow:hidden;}
+    </style>
+    
+    
+    <script>
+        $(document).ready(function(){
+            //버튼1을 클릭하면 이미지를 slideToggle을 이용하기
+            $(".btn1").click(function(){
+                $(".img").slideToggle();
+            });
+            $(".btn2").click(function(){
+                $(".img").animate({height:"0"},400);
+            });
+            $(".btn3").click(function(){
+                $(".img").animate({height:"300"},400);
+            });
+            $(".btn4").click(function(){
+                $(".img").animate({width:"0"},400);
+            });
+            $(".btn5").click(function(){
+                $(".img").animate({width:"330"},400);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button class="btn1">slideToggle</button>
+    <button class="btn2">hight hide</button>
+    <button class="btn3">hight show</button>
+    <button class="btn4">width hide</button>
+    <button class="btn5">width show</button>
+
+    <div class="img">
+        <img src="./resource/images/img01.jpg" alt="">
+    </div>
+</body>
+</html>
